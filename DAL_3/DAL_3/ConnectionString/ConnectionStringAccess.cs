@@ -1,7 +1,9 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using DAL_3.TableNameSqlite;
+using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,5 +33,7 @@ namespace DAL_3.ConnectionString
             }
             return  new SqliteConnection(@"DataSource=" + pathDbFile + tablename).ConnectionString;
         }
+
+       
     }
 }
